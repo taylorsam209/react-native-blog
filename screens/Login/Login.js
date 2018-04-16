@@ -1,12 +1,26 @@
 import React from "react";
-import { Container } from "../styles";
-import { Text } from "react-native";
+import { TextInput, FormControl, Button } from "../../styles";
+import { Title, LoginWrapper, FormContainer } from "./Login.style";
 
 const Login = props => {
   return (
-    <Container>
-      <Text>Login</Text>
-    </Container>
+    <LoginWrapper>
+      <Title h4>Sign in to start blogging</Title>
+      <FormContainer>
+        <FormControl>
+          <TextInput
+            placeholder={"Email address"}
+            keyboardType={"email-address"}
+          />
+        </FormControl>
+
+        <FormControl>
+          <TextInput placeholder={"Password"} secureTextEntry />
+        </FormControl>
+      </FormContainer>
+
+      <Button info title="Login" />
+    </LoginWrapper>
   );
 };
 

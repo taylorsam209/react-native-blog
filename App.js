@@ -8,7 +8,11 @@ export default StackNavigator({
   Login: {
     screen: Login,
     navigationOptions: {
-      title: "Login"
+      title: "Login",
+      headerTitleStyle: {
+        flex: 1,
+        textAlign: 'center'
+      }
     }
   }
 });
