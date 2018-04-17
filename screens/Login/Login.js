@@ -3,6 +3,7 @@ import { TextInput, FormControl, Button } from "../../styles";
 import { Title, LoginWrapper, FormContainer } from "./Login.style";
 
 const Login = props => {
+  console.log(props)
   return (
     <LoginWrapper>
       <Title h4>Sign in to start blogging</Title>
@@ -19,7 +20,11 @@ const Login = props => {
         </FormControl>
       </FormContainer>
 
-      <Button info title="Login" />
+      <Button 
+      info 
+      title="Login"
+      onPress ={()=> props.navigation.navigate("Blogs")} 
+      />
     </LoginWrapper>
   );
 };
